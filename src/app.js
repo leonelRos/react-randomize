@@ -3,7 +3,11 @@ import ReactDOM from "react-dom";
 
 class App extends React.Component {
   render() {
-    return <h1>Welcome to React</h1>;
+    return (
+      <div>
+        <h1>this is react</h1>
+      </div>
+    );
   }
 }
 
