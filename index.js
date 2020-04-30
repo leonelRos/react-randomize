@@ -1,16 +1,19 @@
-//import express
+//import express, axios, cors
 const express = require('express');
-// importing axios
 const axios = require('axios');
+const cors = require('cors')
+
 //we call the app
 const app = express();
 
-//wecreate the route
+//calling express middleware cors
+app.use(cors())
+//we create the route
 app.get('/', (req, res) => {
     res.send("Hello World")
 })
 
-app.get('/users', (req, res) => {
+app.get('/user', (req, res) => {
     //we are getting the API url
     axios.get('https://randomuser.me/api/?page=1&results=10')
         .then(response => {
