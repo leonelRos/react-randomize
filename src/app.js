@@ -6,8 +6,6 @@ class App extends React.Component {
     return (
       <div>
         <h1>this is react</h1>
-        <button>press</button>
-        {Math.floor(Math.random() * 9)}
       </div>
     );
   }
