@@ -2,7 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
 import store from "./store/store";
-import addUsers from "./actions/user";
+import { addUsers } from "./actions/user";
+import Header from "./components/Header";
+import { Provider } from "react-redux";
+import UserList from "./components/UserList";
 
 class App extends React.Component {
   componentDidMount() {
@@ -14,8 +17,23 @@ class App extends React.Component {
     });
   }
   render() {
-    return <React.Fragment>Hello React</React.Fragment>;
+    return (
+      <div>
+        Hello React
+        <Header />
+        <UserList />
+      </div>
+    );
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// ReactDOM.render(<App />, document.getElementById("root"));
+//changing the react dom method to provider because of redux
+
+ReactDOM.render(
+  //we are passing the store prop to the provider component
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
