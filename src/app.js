@@ -6,6 +6,7 @@ import { addUsers } from "./actions/user";
 import Header from "./components/Header";
 import { Provider } from "react-redux";
 import UserList from "./components/UserList";
+import "./css/styles.css";
 
 class App extends React.Component {
   componentDidMount() {

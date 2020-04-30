@@ -7,9 +7,9 @@ import User from "./User";
 
 const UserList = (props) => {
   return (
-    <div>
-      {props.users &&
-        props.users.map((user) => <User key={user.login.uuid} {...user} />)}
+    <div className="user-list">
+      {props.user &&
+        props.user.map((user) => <User key={user.login.uuid} {...user} />)}
     </div>
   );
 };
@@ -17,7 +17,7 @@ const UserList = (props) => {
 // this method gets the redux store data
 const mapStateToProps = (state) => {
   return {
-    users: state,
+    user: state,
   };
 };
 
