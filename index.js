@@ -1,13 +1,16 @@
-//import express, axios, cors
+//import express, axios, cors, path
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors')
+const path = require('path');
+
 
 //we call the app
 const app = express();
 
 //calling express middleware cors
 app.use(cors())
+app.use(express.static(path.join(__dirname, "..", 'public')));
 //we create the route
 app.get('/', (req, res) => {
     res.send("Hello World")

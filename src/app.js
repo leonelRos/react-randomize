@@ -19,7 +19,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="main-section">
         Hello React
         <Header />
         <UserList />
@@ -38,3 +38,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
+// this page works  but I need to find out why it doesnt
+//work when i remove the url
